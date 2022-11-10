@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AndroidFinalProject</string>
+    <string name="costume_name">Costume Name</string>
+    <string name="price">Rp. Price</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="size">size</string>
+    <string name="size_label">Size</string>
+    <string name="spec_title">Costume Details</string>
 </resources>
