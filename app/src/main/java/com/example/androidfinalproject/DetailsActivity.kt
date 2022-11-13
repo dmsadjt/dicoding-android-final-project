@@ -20,6 +20,9 @@ class DetailsActivity : AppCompatActivity() {
         val tvPrice : TextView = findViewById(R.id.costume_price)
         val tvSize : TextView = findViewById(R.id.costume_size)
         val tvDetail : TextView = findViewById(R.id.costume_description)
+        val tvPieces : TextView = findViewById(R.id.costume_pieces)
+        val tvSource : TextView = findViewById(R.id.costume_source)
+
         val costumeImg : ImageView = findViewById(R.id.costume_image)
 
         val costume =intent.getParcelableExtra<Costume>(EXTRA_COSTUME) as Costume
@@ -27,6 +30,8 @@ class DetailsActivity : AppCompatActivity() {
         tvPrice.text = "Rp. ${costume.price.toString()}"
         tvSize.text = costume.size
         tvDetail.text = costume.detail
+        tvPieces.text = costume.pieces.toString()
+        tvSource.text = costume.source
         costumeImg.setImageResource(costume.photo)
         setActionBarTitle(costume.name)
 

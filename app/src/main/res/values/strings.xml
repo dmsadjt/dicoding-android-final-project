@@ -6,4 +6,9 @@
     <string name="size">size</string>
     <string name="size_label">Size</string>
     <string name="spec_title">Costume Details</string>
+    <string name="source">Source</string>
+    <string name="pieces">Costume Piece(s)</string>
+    <string name="description_title">Character Description</string>
+    <string name="price_tag">Price (in IDR)</string>
+    <string name="company_name">Macaron Cosrent</string>
 </resources>
