@@ -13,5 +13,5 @@ data class Costume(
  var size: String = "",
  var photo: Int = 0,
  var pieces: Int = 0,
- var source: Int = 0,
+ var source: String = "",
 ) : Parcelable

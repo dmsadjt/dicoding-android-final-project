@@ -9,7 +9,9 @@ object CostumeData {
         "Yor Forger",
         "Yae Miko",
         "Raiden Shogun",
-        "Ganyu"
+        "Ganyu",
+        "Saileach",
+        "Chinatsu"
     )
 
     private val costumePrice = arrayOf(
@@ -20,7 +22,9 @@ object CostumeData {
         105000,
         125000,
         125000,
-        100000
+        100000,
+        140000,
+        90000
     )
 
     private val costumeSize = arrayOf(
@@ -31,7 +35,9 @@ object CostumeData {
         "XL",
         "L",
         "L",
-        "L"
+        "L",
+        "XL",
+        "L-XL"
     )
 
     private val costumeImage = arrayOf(
@@ -42,7 +48,9 @@ object CostumeData {
         R.drawable.yor,
         R.drawable.yae,
         R.drawable.raiden,
-        R.drawable.ganyu
+        R.drawable.ganyu,
+        R.drawable.saileach,
+        R.drawable.chinatsu
     )
 
     private val costumeDetail = arrayOf(
@@ -54,18 +62,25 @@ object CostumeData {
         "Yae Miko(Japanese: 八や重え神み子こ Yae Miko), also known as Guuji Yae (Japanese: 宮ぐう司じ Guuji) or the Guuji, is a playable Electro character in Genshin Impact.",
         "The Raiden Shogun is unique as she is comprised of two beings in one body: Ei, the current Electro Archon of Inazuma; and the Shogun, the puppet created by Ei to act as the ruler of Inazuma in her stead, which also serves as her vessel.",
         "Ganyu (Chinese: 甘雨 Gānyǔ) is a playable Cryo character in Genshin Impact. She is a half-qilin Adeptus under contract with the Geo Archon Morax and serves as the general secretary of the Liyue Qixing.",
+        "A former ceremonial standard bearer from Victoria, she served at the Victorian Army Barracks in County Hillock, where the head of the local Rhodes Island branch office presented her to us as a liaison operator. ",
+        "Chinatsu Kano (鹿野 千夏 Kano Chinatsu?) is one of the main characters of the Blue Box manga series. She is a second-year student at Eimei Senior High School and a member of the Basketball Team."
     )
 
     private val costumePieces = arrayOf(
-        4,8,6,3,5,7,6,10
+        4,8,6,3,5,7,6,10,10,3
     )
 
     private val costumeSources = arrayOf(
-        "TaoBao",
-        "Alibaba",
-        "Alibaba",
-        "Taobao",
-        "Alibaba",
+        "Kakao",
+        "Saluja",
+        "Saluja",
+        "Kakao",
+        "Saluja",
+        "Saluja",
+        "Kakao",
+        "Shopii",
+        "Shopedia",
+        "Shopedia"
     )
 
     val listData : ArrayList<Costume>
@@ -78,6 +93,8 @@ object CostumeData {
                 costume.size = costumeSize[position]
                 costume.detail = costumeDetail[position]
                 costume.photo = costumeImage[position]
+                costume.pieces = costumePieces[position]
+                costume.source = costumeSources[position]
                 list.add(costume)
             }
             return list

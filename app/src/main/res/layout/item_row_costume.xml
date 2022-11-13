@@ -30,50 +30,23 @@
             tools:text="@string/costume_name"
             />
 
-        <TableLayout
-            android:id="@+id/price_size_grid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/costume_name">
-
-            <TableRow
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent">
-
-                <TextView
-                    android:id="@+id/size"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    tools:text="@string/size"
-                    />
-
-                <TextView
+            <TextView
                     android:id="@+id/price"
-                    android:layout_toEndOf="@id/size"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
                     android:textSize="12sp"
                     tools:text="@string/price"
-                    />
-            </TableRow>
-
-
-
-
-
-        </TableLayout>
+                />
 
 
         <TextView
             android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/price_size_grid"
+            android:layout_below="@id/price"
             android:textSize="12sp"
+            android:ellipsize="end"
             android:maxLines="2"
             android:text="@string/description"
             />

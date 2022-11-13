@@ -31,7 +31,7 @@ class ListAdapter(private val listCostume : ArrayList<Costume>) : RecyclerView.A
 
         holder.tvName.text = costume.name
         holder.tvPrice.text = "Rp." + costume.price.toString()
-        holder.tvSize.text = costume.size
+//        holder.tvSize.text = costume.size
         holder.tvDescription.text = costume.detail
 
         holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listCostume[holder.adapterPosition]) }
@@ -43,7 +43,7 @@ class ListAdapter(private val listCostume : ArrayList<Costume>) : RecyclerView.A
 
     inner class ListViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         var tvName : TextView = itemView.findViewById(R.id.costume_name)
-        var tvSize : TextView = itemView.findViewById(R.id.size)
+//        var tvSize : TextView = itemView.findViewById(R.id.size)
         var tvPrice : TextView = itemView.findViewById(R.id.price)
         var tvDescription : TextView = itemView.findViewById(R.id.description)
         var imgPhoto : ImageView = itemView.findViewById(R.id.image)
