@@ -15,6 +15,7 @@ class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
+        supportActionBar?.hide()
 
         val tvName : TextView = findViewById(R.id.costume_name)
         val tvPrice : TextView = findViewById(R.id.costume_price)

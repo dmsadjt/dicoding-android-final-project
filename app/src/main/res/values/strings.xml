@@ -11,4 +11,7 @@
     <string name="description_title">Character Description</string>
     <string name="price_tag">Price (in IDR)</string>
     <string name="company_name">Macaron Cosrent</string>
+    <string name="toolbar">Macaron</string>
+    <string name="nama">Muhammad Dimas Adijanto</string>
+    <string name="email">email</string>
 </resources>

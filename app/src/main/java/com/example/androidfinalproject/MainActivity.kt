@@ -4,10 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
+import android.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var rvCostume : RecyclerView
     private var list: ArrayList<Costume> = arrayListOf()
@@ -22,7 +24,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setActionBarTitle(title)
+        supportActionBar?.hide()
+//        setSupportActionBar(findViewById(R.id.toolbar))
 
         rvCostume = findViewById(R.id.rv_costume)
         rvCostume.setHasFixedSize(true)
@@ -30,7 +33,17 @@ class MainActivity : AppCompatActivity() {
         list.addAll(CostumeData.listData)
         showRecyclerList()
 
+        val profile = Profile(
+            "Muhammad Dimas Adijanto",
+            "its.dee.mus@gmail.com",
+            R.drawable.foto_profil
+        )
+
+        val aboutMeBtn : ImageView = findViewById(R.id.about_page)
+        aboutMeBtn.setImageResource(profile.photo)
+        aboutMeBtn.setOnClickListener(this)
     }
+
 
     private fun setActionBarTitle(title: String) {
         supportActionBar?.title = title
@@ -46,5 +59,17 @@ class MainActivity : AppCompatActivity() {
                 showSelectedCostume(data)
             }
         })
+    }
+
+    override fun onClick(p0: View?) {
+        val profile = Profile(
+            "Muhammad Dimas Adijanto",
+            "its.dee.mus@gmail.com",
+            R.drawable.foto_profil
+        )
+
+        val moveObjectWithParcel =Intent(this@MainActivity, ProfileActivity::class.java)
+        moveObjectWithParcel.putExtra(ProfileActivity.EXTRA_PROFILE, profile)
+        startActivity(moveObjectWithParcel)
     }
 }

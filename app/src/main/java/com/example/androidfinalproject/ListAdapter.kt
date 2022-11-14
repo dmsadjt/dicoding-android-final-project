@@ -21,6 +21,7 @@ class ListAdapter(private val listCostume : ArrayList<Costume>) : RecyclerView.A
         return ListViewHolder(view)
     }
 
+
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val costume = listCostume[position]
 
