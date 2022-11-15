@@ -15,8 +15,9 @@ class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
-        supportActionBar?.hide()
+        setSupportActionBar(findViewById(R.id.toolbar))
 
+        val title : TextView = findViewById(R.id.toolbar_title)
         val tvName : TextView = findViewById(R.id.costume_name)
         val tvPrice : TextView = findViewById(R.id.costume_price)
         val tvSize : TextView = findViewById(R.id.costume_size)
@@ -27,6 +28,7 @@ class DetailsActivity : AppCompatActivity() {
         val costumeImg : ImageView = findViewById(R.id.costume_image)
 
         val costume =intent.getParcelableExtra<Costume>(EXTRA_COSTUME) as Costume
+        title.text = costume.name
         tvName.text = costume.name
         tvPrice.text = "Rp. ${costume.price.toString()}"
         tvSize.text = costume.size

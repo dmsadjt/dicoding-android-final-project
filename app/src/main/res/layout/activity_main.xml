@@ -11,6 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/Theme.AndroidFinalProject"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -20,11 +21,10 @@
 
             <TextView
                 android:id="@+id/toolbar_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                style="@style/Text.Two"
                 android:layout_centerVertical="true"
-                android:text="@string/toolbar"/>
+                android:text="@string/toolbar_main"
+                />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/about_page"

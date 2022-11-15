@@ -7,8 +7,6 @@
     tools:context=".DetailsActivity">
 
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/Theme.AndroidFinalProject"
             >
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -28,18 +27,9 @@
 
                 <TextView
                     android:id="@+id/toolbar_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
+                    style="@style/Text.Two"
                     android:layout_centerVertical="true"
-                    android:text="@string/toolbar"/>
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/about_page"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentEnd="true"
-                    tools:src="@tools:sample/avatars"/>
+                    android:text="@string/toolbar_main"/>
 
             </RelativeLayout>
 
@@ -54,12 +44,12 @@
             tools:src="@tools:sample/avatars"/>
 
         <TextView
+            style="@style/Text.One"
             android:id="@+id/costume_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_margin="12dp"
-            android:textSize="30sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
             tools:text="@string/costume_name"
             />
 
@@ -73,20 +63,16 @@
             android:textSize="14sp"/>
 
         <TextView
+            style="@style/Text.One"
             android:id="@+id/costume_price"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginRight="12dp"
             android:layout_marginLeft="12dp"
             android:layout_marginBottom="12dp"
-            android:textSize="32sp"
-            android:textStyle="bold"
             tools:text="@string/price"
             />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/Text.Two"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:layout_marginTop="12dp"
@@ -95,25 +81,20 @@
             android:textSize="18sp"/>
 
         <TextView
+            style="@style/Text.Content"
             android:id="@+id/costume_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:layout_marginTop="12dp"
-            android:textSize="18sp"
             tools:text="@string/description"
             />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/Text.Two"
             android:text="@string/spec_title"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:layout_marginTop="12dp"
-            android:textStyle="bold"
-            android:textSize="18sp"
             />
 
         <TableLayout
@@ -130,20 +111,13 @@
                 >
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_weight="1"
-                    android:textSize="14sp"
+                    style="@style/Table.Content.Header"
                     android:text="@string/size_label"
                     />
 
                 <TextView
                     android:id="@+id/costume_size"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="9"
-                    android:textSize="14sp"
+                    style="@style/Table.Content.NoHead"
                     tools:text="@string/size" />
 
             </TableRow>
@@ -154,20 +128,13 @@
                 >
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_weight="1"
-                    android:textSize="14sp"
+                    style="@style/Table.Content.Header"
                     android:text="@string/pieces"
                     />
 
                 <TextView
                     android:id="@+id/costume_pieces"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="9"
-                    android:textSize="14sp"
+                    style="@style/Table.Content.NoHead"
                     tools:text="@string/size" />
 
             </TableRow>
@@ -178,25 +145,24 @@
                 >
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_weight="1"
-                    android:textSize="14sp"
+                    style="@style/Table.Content.Header"
                     android:text="@string/source"
                     />
 
                 <TextView
                     android:id="@+id/costume_source"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="9"
-                    android:textSize="14sp"
+                    style="@style/Table.Content.NoHead"
                     tools:text="@string/size" />
 
             </TableRow>
 
         </TableLayout>
+
+        <Button
+            style="@style/Button"
+            android:id="@+id/action_share"
+            android:text="@string/action_share"
+            />
 
     </LinearLayout>
 

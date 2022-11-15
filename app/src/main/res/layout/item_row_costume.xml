@@ -22,30 +22,24 @@
         >
 
         <TextView
+            style="@style/Text.Two"
             android:id="@+id/costume_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:textSize="18sp"
             tools:text="@string/costume_name"
             />
 
             <TextView
+                    style="@style/Text.Three"
                     android:id="@+id/price"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_weight="7"
-                    android:textSize="12sp"
                     tools:text="@string/price"
                 />
 
 
         <TextView
             android:id="@+id/description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/Text.Three"
             android:layout_below="@id/price"
-            android:textSize="12sp"
             android:ellipsize="end"
             android:maxLines="2"
             android:text="@string/description"
