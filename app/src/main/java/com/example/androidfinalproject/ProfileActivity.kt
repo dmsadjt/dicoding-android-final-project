@@ -24,7 +24,6 @@ class ProfileActivity : AppCompatActivity() {
         val name : TextView = findViewById(R.id.user_name)
         val email : TextView = findViewById(R.id.user_email)
 
-
         photo.setImageResource(profile!!.photo)
         name.text = profile.name
         title.text = profile.name
